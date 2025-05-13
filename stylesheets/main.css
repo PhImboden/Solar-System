@@ -156,22 +156,38 @@ footer {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .nav-toggle:checked ~ .nav-list {
+    .nav-toggle:checked~.nav-list {
         height: auto;
         padding-bottom: 1rem;
     }
 
-    .nav-toggle:checked ~ .nav-toggle-label span {
+    .nav-toggle:checked~.nav-toggle-label span {
         background: transparent;
     }
 
-    .nav-toggle:checked ~ .nav-toggle-label span::before {
+    .nav-toggle:checked~.nav-toggle-label span::before {
         transform: rotate(45deg);
         bottom: 0;
     }
 
-    .nav-toggle:checked ~ .nav-toggle-label span::after {
+    .nav-toggle:checked~.nav-toggle-label span::after {
         transform: rotate(-45deg);
         top: 0;
     }
+}
+
+body.sonne {
+    background: linear-gradient(to bottom, #FFD700, #FF8C00, #FF4500);
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+body.sonne .content img {
+    float: left;
+    /* Bild links ausrichten */
+    margin: 0 20px 10px 0;
+    /* Abstand rechts und unten */
+    max-width: 300px;
+    /* Kleiner als im Original für besseren Textfluss */
+    height: auto;
 }
