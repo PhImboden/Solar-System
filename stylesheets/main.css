@@ -191,3 +191,76 @@ body.sonne .content img {
     /* Kleiner als im Original für besseren Textfluss */
     height: auto;
 }
+
+
+
+
+/* CSS für die sich drehende Sonne */
+
+/* Das Element für die sich drehende Sonne positionieren */
+.rotating-sun-background {
+    position: fixed; /* Bleibt an Ort und Stelle beim Scrollen */
+    top: -5%;
+    left: 20%;
+    transform: translate(-50%, -50%); /* Zentriert die Sonne */
+    width: 60vw; /* Größe relativ zum Viewport */
+    height: 60vw;
+    background-image: url('https://pngimg.com/uploads/sun/sun_PNG13424.png'); /* Sonnenbild */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; /* Platziert das Element hinter dem Content */
+    transition: transform 0.1s ease; /* Macht die Drehung etwas weicher */
+    opacity: 0.7; /* Transparenz, damit der Content lesbar bleibt */
+    pointer-events: none; /* Ermöglicht Interaktionen mit Elementen hinter der Sonne */
+}
+
+/* Anpassungen für den Body */
+body.sonne {
+    position: relative; /* Notwendig für die korrekte Positionierung der Kinder-Elemente */
+    min-height: 100vh; /* Stellt sicher, dass die Seite mindestens die volle Bildschirmhöhe hat */
+    color: #ffffff; /* Helle Textfarbe für bessere Lesbarkeit */
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+
+/* Stilanpassungen für den Content für bessere Lesbarkeit mit der Sonne im Hintergrund */
+.content {
+    position: relative;
+    z-index: 1; /* Über dem Hintergrund, aber unter der Navigation */
+    padding: 2rem;
+    background-color: rgba(7, 18, 62, 0.7); /* Halbtransparenter Hintergrund */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(252, 186, 3, 0.3); /* Sonniger Glanz um den Content */
+}
+
+/* Anpassungen für Header-Elemente */
+h1, h2 {
+    color: #FFC107; /* Gelb/Gold für Überschriften, passend zur Sonne */
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Glühen um die Überschriften */
+}
+
+/* Anpassungen für Links */
+a {
+    color: #FFC107;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFEB3B;
+    text-shadow: 0 0 5px rgba(255, 235, 59, 0.7);
+}
+
+/* Responsive Anpassungen für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .rotating-sun-background {
+        width: 80vw;
+        height: 80vw;
+    }
+    
+    .content {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
