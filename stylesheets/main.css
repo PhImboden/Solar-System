@@ -185,6 +185,7 @@ footer {
     }
 }
 
+/* SONNE*/
 body.sonne {
     background: linear-gradient(to bottom, #FFD700, #FF8C00, #FF4500);
     color: #000;
@@ -258,4 +259,75 @@ a {
 a:hover {
     color: #FFEB3B;
     text-shadow: 0 0 5px rgba(255, 235, 59, 0.7);
+}
+
+
+
+
+
+
+
+/* Merkur*/
+body.merkur {
+    background: linear-gradient(to bottom, #2f2f2f, #4f4f4f, #888888); /* Grautöne von dunkel nach hell */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Bild im Content rechts ausrichten, wie bei der Sonne */
+body.merkur .content img {
+    float: right;
+    margin: 0 90px 0px 0;
+    max-width: 340px;
+    height: auto;
+}
+
+/* Rotierender Planet (Merkur) */
+.rotating-mercury-background {
+    position: fixed;
+    top: -5%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vw;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/048/412/678/non_2x/mercury-planet-on-transparent-backdrop-free-png.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    transition: transform 0.1s ease;
+    opacity: 0.7;
+    filter: grayscale(100%) brightness(0.9); /* Düsterer Look für Merkur */
+    pointer-events: none;
+}
+
+/* Content-Styling */
+.content {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(20, 20, 20, 0.7);
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(200, 200, 200, 0.2); /* Sanfter metallischer Glanz */
+}
+
+/* Überschriften */
+h1, h2 {
+    color: #ccc; /* Silberfarbener Ton für Merkur */
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+}
+
+/* Links */
+a {
+    color: #bbbbbb;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
