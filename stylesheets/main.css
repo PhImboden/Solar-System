@@ -331,3 +331,75 @@ a:hover {
     color: #ffffff;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
+
+
+
+
+
+/* Venus */
+/* Basis-Styling für die Venus-Seite */
+body.venus {
+    background: linear-gradient(to bottom, #402f4c, #e05263, #f39c12); /* Venus-typische Lava- und Wolkenfarben */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Inhalt */
+body.venus .content {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(48, 12, 24, 0.75); /* dunkles rötlich-violettes Overlay */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(255, 136, 77, 0.3); /* leichtes Glühen */
+}
+
+/* Venus-Bild rechts ausrichten */
+body.venus .content img {
+    float: right;
+    margin: 0 90px 0px 0;
+    max-width: 340px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 190, 138, 0.3);
+}
+
+/* Überschriften */
+body.venus h1, 
+body.venus h2 {
+    color: #ffb347; /* warmer Orange-Gold-Ton */
+    text-shadow: 0 0 10px rgba(255, 136, 77, 0.6);
+}
+
+/* Links */
+body.venus a {
+    transition: color 0.3s ease;
+}
+
+body.venus a:hover {
+    color: #ffe082;
+    text-shadow: 0 0 5px rgba(255, 235, 59, 0.7);
+}
+
+/* Drehende Venus im Hintergrund */
+.rotating-venus-background {
+    position: fixed;
+    top: -5%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vw;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Venus_globe_-_transparent_background.png/2048px-Venus_globe_-_transparent_background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    transition: transform 0.1s ease;
+    opacity: 0.6;
+    pointer-events: none;
+    filter: hue-rotate(15deg) saturate(120%);
+}
