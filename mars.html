@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <script src="script.js"></script>
+</head>
+
+<body class="mars">
+    <!-- Hier das neue Element für die sich drehende Mars -->
+    <div class="rotating-mars-background"></div>
+
+    <header>
+        <nav class="main-nav">
+            <div id="logo">
+                <img src="images/logo.png" alt="Solar System Logo" />
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Sonne.html">Sonne</a></li>
+                <li><a href="merkur.html">Merkur</a></li>
+                <li><a href="venus.html">Venus</a></li>
+                <li><a href="erde.html">Erde</a></li>
+                <li><a href="mars.html">Mars</a></li>
+                <li><a href="jupiter.html">Jupiter</a></li>
+                <li><a href="saturn.html">Saturn</a></li>
+                <li><a href="uranus.html">Uranus</a></li>
+                <li><a href="neptun.html">Neptun</a></li>
+                <li><a href="KleinPlaneten.html">Kleinplaneten</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+  <main>
+    <section class="content">
+        <h1>Der Mars</h1>
+        <article style="margin-bottom: 2rem;">
+            <h2>Ein Überblick</h2>
+            <p>Der Mars, oft als „Roter Planet“ bezeichnet, ist der vierte Planet von der Sonne aus. Seine rostrote Farbe verdankt er Eisenoxid auf seiner Oberfläche. Mars ist ein erdähnlicher Planet mit Jahreszeiten, Polkappen, Tälern und vielleicht einst fließendem Wasser.</p>
+        </article>
+
+        <img src="https://pngimg.com/d/mars_planet_PNG38.png" alt="Der Mars" />
+
+        <article>
+            <h2>Grundlegende Fakten</h2>
+            <ul>
+                <li><strong>Durchmesser:</strong> ca. 6.779 km</li>
+                <li><strong>Masse:</strong> 6,42 × 10²³ kg (ca. 0,107 Erdmassen)</li>
+                <li><strong>Oberflächentemperatur:</strong> -125 °C bis +20 °C</li>
+                <li><strong>Umlaufzeit um die Sonne:</strong> ca. 687 Erdtage</li>
+                <li><strong>Rotationsdauer:</strong> ca. 24,6 Stunden</li>
+                <li><strong>Entfernung zur Sonne:</strong> ca. 228 Mio. km (1,52 AE)</li>
+                <li><strong>Dichte:</strong> 3,93 g/cm³</li>
+                <li><strong>Gravitation:</strong> ca. 3,7 m/s²</li>
+                <li><strong>Atmosphäre:</strong> dünn, hauptsächlich CO₂</li>
+                <li><strong>Mondsystem:</strong> zwei kleine Monde – Phobos und Deimos</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Geologie und Oberfläche</h2>
+            <p>Mars zeigt Spuren gewaltiger geologischer Prozesse. Der Olympus Mons ist der größte Vulkan des Sonnensystems, Valles Marineris ein gigantischer Canyon. Alte Flussläufe deuten auf einstiges Wasser hin – vielleicht gab es einst Leben.</p>
+
+            <h2>Klima und Atmosphäre</h2>
+            <p>Die dünne Atmosphäre des Mars schützt kaum vor Kälte und Strahlung. Staubstürme können den ganzen Planeten einhüllen. Trotzdem gibt es Jahreszeiten und Wetterphänomene wie Eiskristallwolken oder CO₂-Schnee an den Polen.</p>
+
+            <h2>Raumfahrt und Forschung</h2>
+            <p>Mars ist ein Hauptziel der Raumfahrt: Zahlreiche Sonden und Rover wie <strong>Curiosity</strong> und <strong>Perseverance</strong> haben seine Oberfläche erforscht. Künftige Missionen sollen Bodenproben zurückbringen – und vielleicht eines Tages Menschen zum Mars bringen.</p>
+        </article>
+
+        <article>
+            <h2>Fun Fact</h2><img src="https://www.jenoptik.com/-/media/websiteimages/visuals/photonics/mars-rover/mars-cosmos-space.jpg?impolicy=resize&width=1920" />
+            <p>Ein Tag auf dem Mars – ein sogenannter „Sol“ – ist nur etwa 40 Minuten länger als ein Erdtag. Aber ein Marsjahr dauert fast doppelt so lang.</p>
+            <p>Obwohl der Mars kalt und trocken erscheint, gibt es unter seiner Oberfläche Hinweise auf flüssiges Wasser. Einige Wissenschaftler vermuten sogar, dass primitives Leben existieren könnte – tief unter dem roten Staub.</p>
+            <p>Der Mars ist mehr als nur ein Nachbarplanet. Er ist ein Versprechen. Ein Symbol für Entdeckung, für Zukunft – und vielleicht unsere nächste Heimat.</p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>©Created by Philipp</p>
+    <div class="nav-list">
+        <a href="Impressum.html" class="footer-link">Impressum</a>
+        <a href="Datenschutz.html" class="footer-link">Datenschutz</a>
+    </div>
+</footer>
+
+<!-- JavaScript für die Mars-Drehung beim Scrollen -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const rotationDegree = scrollPosition / 3;
+            document.querySelector('.rotating-mars-background').style.transform = `rotate(${rotationDegree}deg)`;
+        });
+    });
+</script>
+</body>
+</html>
+
+
+</body>
+</html>

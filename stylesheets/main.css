@@ -381,7 +381,7 @@ body.venus a {
 }
 
 body.venus a:hover {
-    color: #ffe082;
+    color: #7FDBFF;;
     text-shadow: 0 0 5px rgba(255, 235, 59, 0.7);
 }
 
@@ -471,3 +471,70 @@ a:hover {
     color: #ffffff;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
+
+
+
+/* Mars */
+body.mars {
+    background: linear-gradient(to bottom, #2e1d0e, #6b2c1d, #ba4a00);
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Mars-Content */
+body.mars .content {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(45, 20, 10, 0.75);
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.3); /* Mars-artiger Glanz */
+}
+
+/* Bild im Content */
+body.mars .content img {
+    float: right;
+    margin: 0 90px 0px 0;
+    max-width: 340px;
+    height: auto;
+}
+
+/* Überschriften */
+body.mars h1, body.mars h2 {
+    color: #ff7043;
+    text-shadow: 0 0 10px rgba(255, 112, 67, 0.5);
+}
+
+/* Links */
+body.mars a {
+    
+    transition: color 0.3s ease;
+}
+
+body.mars a:hover {
+    color: #7FDBFF;
+    text-shadow: 0 0 5px rgba(255, 171, 145, 0.7);
+}
+
+/* Rotierender Mars im Hintergrund */
+.rotating-mars-background {
+    position: fixed;
+    top: -5%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vw;
+    background-image: url('https://pngimg.com/d/mars_planet_PNG38.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    transition: transform 0.1s ease;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
