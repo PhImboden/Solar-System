@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <script src="script.js"></script>
+</head>
+
+<body class="erde">
+    <!-- Hier das neue Element für die sich drehende Erde -->
+    <div class="rotating-earth-background"></div>
+
+    <header>
+        <nav class="main-nav">
+            <div id="logo">
+                <img src="images/logo.png" alt="Solar System Logo" />
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Sonne.html">Sonne</a></li>
+                <li><a href="merkur.html">Merkur</a></li>
+                <li><a href="venus.html">Venus</a></li>
+                <li><a href="erde.html">Erde</a></li>
+                <li><a href="mars.html">Mars</a></li>
+                <li><a href="jupiter.html">Jupiter</a></li>
+                <li><a href="saturn.html">Saturn</a></li>
+                <li><a href="uranus.html">Uranus</a></li>
+                <li><a href="neptun.html">Neptun</a></li>
+                <li><a href="KleinPlaneten.html">Kleinplaneten</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section class="content">
+        <h1>Die Erde</h1>
+
+        <article style="margin-bottom: 2rem;">
+            <h2>Ein Überblick</h2>
+            <p>Die Erde ist unser Heimatplanet – der einzige bislang bekannte Himmelskörper, auf dem Leben existiert. Sie ist der drittinnerste Planet im Sonnensystem und bildet mit ihrer Atmosphäre, Wasserkreisläufen und tektonischen Aktivität ein dynamisches, lebensfreundliches System.</p>
+        </article>
+
+        <img src="https://pngimg.com/d/globe_PNG100087.png" alt="Die Erde" />
+
+        <article>
+            <h2>Grundlegende Fakten</h2>
+            <ul>
+                <li><strong>Durchmesser:</strong> ca. 12.742 km</li>
+                <li><strong>Masse:</strong> ca. 5,97 × 10²⁴ kg</li>
+                <li><strong>Oberflächentemperatur:</strong> -88 °C bis +58 °C</li>
+                <li><strong>Umlaufzeit um die Sonne:</strong> 365,25 Tage</li>
+                <li><strong>Rotationsdauer:</strong> ca. 24 Stunden</li>
+                <li><strong>Entfernung zur Sonne:</strong> ca. 149,6 Mio. km (1 AE)</li>
+                <li><strong>Dichte:</strong> 5,51 g/cm³</li>
+                <li><strong>Gravitation:</strong> 9,81 m/s²</li>
+                <li><strong>Atmosphäre:</strong> Stickstoff (78 %), Sauerstoff (21 %), Spurengase</li>
+                <li><strong>Magnetfeld:</strong> stark und schützend</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Aufbau der Erde</h2>
+            <p>Die Erde besitzt einen inneren <strong>festen Kern</strong>, einen äußeren <strong>flüssigen Kern</strong>, den <strong>Mantel</strong> sowie die <strong>Kruste</strong>, auf der wir leben. Die Plattentektonik ist ein Zeichen ihrer inneren Dynamik – sie bewegt Kontinente, formt Gebirge und löst Erdbeben aus.</p>
+
+            <h2>Wasser und Atmosphäre</h2>
+            <p>Über 70 % der Erdoberfläche sind mit Wasser bedeckt. Die <strong>Atmosphäre</strong> schützt uns vor Strahlung, reguliert das Klima und ermöglicht das Leben. Das Zusammenspiel von Luft, Wasser, Boden und Leben macht die Erde einzigartig.</p>
+        </article>
+
+        <article>
+            <h2>Leben und Biodiversität</h2>
+            <img src="https://www.globalearthmonitor.eu/sites/default/files/inline-images/globe_loop_transparent.gif" alt="Erde mit Leben" />
+            <p>Die Erde ist ein pulsierendes Biotop. Vom tiefsten Ozeangraben bis in hohe Atmosphärenschichten finden sich Lebensformen. Durch <strong>Photosynthese</strong> produzieren Pflanzen Sauerstoff, Tiere und Menschen bilden ein fein austariertes Gleichgewicht. Der Mensch verändert diese Systeme jedoch zunehmend.</p>
+        </article>
+
+        <article>
+            <h2>Fun Fact</h2>
+            <p>Die Erde ist nicht exakt rund – sie ist an den Polen leicht abgeflacht. Diese <strong>Geoidform</strong> ist das Resultat ihrer Rotation. Und obwohl wir es nicht spüren: Die Erde rast mit etwa 107.000 km/h durch den Raum.</p>
+            <p>Die Gravitation hält alles zusammen – aber ihre Stärke variiert leicht je nach Region. So wiegt man am Äquator ein klein wenig weniger als an den Polen!</p>
+
+            <p>Und das Allerbeste: Unsere Erde ist ein lebendiger Planet – nicht nur durch das Leben auf ihr, sondern auch durch ihre innere Energie, ihre Wetterdynamik, ihre geologischen Prozesse. Ein tanzender Himmelskörper, der zugleich Wiege und Wächter ist.</p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>©Created by Philipp</p>
+    <div class="nav-list">
+        <a href="Impressum.html" class="footer-link">Impressum</a>
+        <a href="Datenschutz.html" class="footer-link">Datenschutz</a>
+    </div>
+</footer>
+
+<!-- JavaScript für die Erdrotation beim Scrollen -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY;
+            const rotationDegree = scrollPosition / 3;
+
+            document.querySelector('.rotating-earth-background').style.transform = `rotate(${rotationDegree}deg)`;
+        });
+    });
+</script>
+
+</body>
+</html>

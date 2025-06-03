@@ -403,3 +403,71 @@ body.venus a:hover {
     pointer-events: none;
     filter: hue-rotate(15deg) saturate(120%);
 }
+
+
+
+/* Erde */
+/* Grundlayout für Erde */
+body.erde {
+    background: linear-gradient(to bottom, #001f3f, #0074D9, #7FDBFF); /* Dunkelblau bis Himmelblau */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Rotierender Erde-Hintergrund */
+.rotating-earth-background {
+    position: fixed;
+    top: -5%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vw;
+    background-image: url('https://pngimg.com/d/globe_PNG100087.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    transition: transform 0.1s ease;
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+/* Content-Box */
+.content {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(0, 0, 40, 0.7); /* Nachtblauer Schleier */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(0, 153, 255, 0.3);
+}
+
+/* Bilder */
+body.erde .content img {
+    float: right;
+    margin: 0 90px 0px 0;
+    max-width: 340px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Überschriften */
+h1, h2 {
+    color: #00d9ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+/* Links */
+a {
+    color: #7FDBFF;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
