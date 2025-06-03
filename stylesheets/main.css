@@ -246,7 +246,7 @@ body.sonne {
 
 /* Anpassungen für Header-Elemente */
 h1, h2 {
-    color: #FFC107; /* Gelb/Gold für Überschriften, passend zur Sonne */
+    color: #ffc107; /* Gelb/Gold für Überschriften, passend zur Sonne */
     text-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Glühen um die Überschriften */
 }
 
