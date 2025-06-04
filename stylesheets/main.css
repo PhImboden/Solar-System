@@ -780,3 +780,66 @@ footer {
     text-decoration: underline;
 }
 
+/* Neptun */
+body.neptun {
+    background: linear-gradient(to bottom, #001f3f, #003366, #004080);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Bild rechts neben dem Text */
+body.neptun .content img {
+    float: right;
+    margin: 0 90px 20px 0;
+    max-width: 340px;
+    height: auto;
+}
+
+/* Drehender Neptun-Hintergrund */
+.rotating-neptun-background {
+    position: fixed;
+    top: -5%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vw;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/da/3D_Neptune.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    transition: transform 0.1s ease;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Content-Bereich */
+.content {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(0, 0, 51, 0.7);
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(0, 153, 255, 0.4);
+}
+
+/* Überschriften */
+h1, h2 {
+    color: #00ccff;
+    text-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+}
+
+/* Links */
+a {
+    color: #00ccff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #66ffff;
+    text-shadow: 0 0 5px rgba(102, 255, 255, 0.7);
+}

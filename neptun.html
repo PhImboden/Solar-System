@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <script src="script.js"></script>
+</head>
+
+<body class="neptun">
+    <!-- Hier das neue Element für die sich drehende Neptun -->
+    <div class="rotating-neptun-background"></div>
+
+    <header>
+        <nav class="main-nav">
+            <div id="logo">
+                <img src="logo.png" alt="Solar System Logo" />
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Sonne.html">Sonne</a></li>
+                <li><a href="merkur.html">Merkur</a></li>
+                <li><a href="venus.html">Venus</a></li>
+                <li><a href="erde.html">Erde</a></li>
+                <li><a href="mars.html">Mars</a></li>
+                <li><a href="jupiter.html">Jupiter</a></li>
+                <li><a href="saturn.html">Saturn</a></li>
+                <li><a href="uranus.html">Uranus</a></li>
+                <li><a href="neptun.html">Neptun</a></li>
+                <li><a href="KleinPlaneten.html">Kleinplaneten</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h1>Der Neptun</h1>
+            <article style="margin-bottom: 2rem;">
+                <h2>Ein Überblick</h2>
+                <p>Neptun ist der achte und äußerste bekannte Planet unseres Sonnensystems – ein eisiger Gigant, umhüllt von Sturmwolken, dessen bläuliche Farbe durch Methan in der Atmosphäre entsteht. Er ist kleiner als Uranus, aber schwerer – ein Zeichen seiner dichten inneren Struktur.</p>
+            </article>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" alt="Der Neptun" />
+
+            <article>
+                <h2>Grundlegende Fakten</h2>
+                <ul>
+                    <li><strong>Durchmesser:</strong> ca. 49.528 km</li>
+                    <li><strong>Masse:</strong> 1,02 × 10²⁶ kg (ca. 17 Erdmassen)</li>
+                    <li><strong>Oberflächentemperatur:</strong> etwa -218 °C</li>
+                    <li><strong>Umlaufzeit um die Sonne:</strong> ca. 165 Erdenjahre</li>
+                    <li><strong>Rotationsdauer:</strong> ca. 16 Stunden</li>
+                    <li><strong>Entfernung zur Sonne:</strong> ca. 4,5 Mrd. km (30 AE)</li>
+                    <li><strong>Atmosphäre:</strong> Wasserstoff, Helium, Methan</li>
+                    <li><strong>Ringe:</strong> 5 schmale, dunkle Ringe</li>
+                    <li><strong>Winde:</strong> bis zu 2.100 km/h – die schnellsten im Sonnensystem</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Ein Planet der Extreme</h2>
+                <p>Neptun ist der stürmischste Planet. Die gigantischen Winde übertreffen alles im Sonnensystem. Seine Atmosphäre ist von dichten Methanwolken durchzogen, darunter toben Wirbelstürme wie die legendäre „Große Dunkle Fleck“.</p>
+            </article>
+
+            <article>
+                <h2>Magnetfeld und Monde</h2>
+                <p>Neptuns Magnetfeld ist stark geneigt und komplex, ähnlich wie das von Uranus. Der größte Mond, <strong>Triton</strong>, ist ein außergewöhnlicher Himmelskörper mit Rückwärtsrotation – er könnte einst ein eingefangener Zwergplanet gewesen sein.</p>
+            </article>
+
+            <article>
+                <h2>Erforschung</h2>
+                <img src="https://skyandtelescope.org/wp-content/uploads/341n.gif" alt="Voyager 2 am Neptun" />
+                <p>Bisher wurde Neptun nur von einer Raumsonde besucht: <strong>Voyager 2</strong> passierte ihn 1989 und entdeckte seine ringförmigen Staubbänder, Stürme und Monde. Weitere Missionen sind in Diskussion – Neptun ist nach wie vor ein unergründetes Reich.</p>
+            </article>
+
+            <article>
+                <h2>Fun Fact</h2>
+                <p>Obwohl Neptun der Sonne so fern ist, strahlt er mehr Energie ab, als er empfängt. Er hat eine eigene innere Wärmequelle – was genau diese antreibt, ist noch ungeklärt.</p>
+                <p>Sein Name stammt vom römischen Meeresgott – passend für diesen blauen, geheimnisvollen Herrscher des kosmischen Ozeans.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>©Created by Philipp</p>
+        <div class="nav-list">
+            <a href="Impressum.html" class="footer-link">Impressum</a>
+            <a href="Datenschutz.html" class="footer-link">Datenschutz</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript für drehenden Neptun beim Scrollen -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('scroll', function () {
+                const scrollPosition = window.scrollY;
+                const rotationDegree = scrollPosition / 3;
+                document.querySelector('.rotating-neptun-background').style.transform = `rotate(${rotationDegree}deg)`;
+            });
+        });
+    </script>
+</body>
+
+</html>
