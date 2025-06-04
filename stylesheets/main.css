@@ -314,7 +314,6 @@ body.merkur .content img {
     max-width: 1200px;
     box-shadow: 0 0 20px rgba(200, 200, 200, 0.2); /* Sanfter metallischer Glanz */
 }
-
 /* Überschriften */
 h1, h2 {
     color: #ccc; /* Silberfarbener Ton für Merkur */
@@ -355,7 +354,7 @@ body.venus .content {
     border-radius: 10px;
     margin: 2rem auto;
     max-width: 1200px;
-    box-shadow: 0 0 20px rgba(255, 136, 77, 0.3); /* leichtes Glühen */
+    box-shadow: (255, 136, 77, 0.3); /* leichtes Glühen */
 }
 
 /* Venus-Bild rechts ausrichten */
@@ -457,8 +456,7 @@ body.erde .content img {
 
 /* Überschriften */
 h1, h2 {
-    color: #00d9ff;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    text-shadow: 0 0 10px rgb(0, 213, 255);
 }
 
 /* Links */
@@ -537,4 +535,71 @@ body.mars a:hover {
     opacity: 0.7;
     pointer-events: none;
 }
+
+
+/* Jupiter */
+/* Jupiter-Stylesheet */
+body.jupiter {
+    background: linear-gradient(to bottom, #3e2f23, #8c5e3c, #b79265);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Jupiter-Bild rechts positioniert */
+body.jupiter .content img {
+    float: right;
+    margin: 0 90px 0 0;
+    max-width: 340px;
+    height: auto;
+}
+
+/* Rotierender Jupiter-Hintergrund */
+.rotating-jupiter-background {
+    position: fixed;
+    top: -37%;
+    left: 3%;
+    transform: translate(-50%, -50%);
+    width: 94vw;
+    height: 94vw;
+    background-image: url('https://pngimg.com/d/jupiter_PNG14.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.3;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+}
+
+/* Content-Stil */
+.content {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(28, 20, 13, 0.75);
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 25px rgba(255, 204, 128, 0.4);
+}
+
+/* Überschriften */
+h1, h2 {
+    color: #fbc16d;
+    text-shadow: 0 0 10px rgba(255, 204, 128, 0.5);
+}
+
+/* Links */
+a {
+    color: #fbc16d;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffe0a3;
+    text-shadow: 0 0 5px rgba(255, 224, 163, 0.7);
+}
+
 

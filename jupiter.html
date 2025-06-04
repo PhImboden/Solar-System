@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <script src="script.js"></script>
+</head>
+
+<body class="jupiter">
+    <!-- Hier das neue Element für die sich drehende Jupiter -->
+    <div class="rotating-jupiter-background"></div>
+
+    <header>
+        <nav class="main-nav">
+            <div id="logo">
+                <img src="logo.png" alt="Solar System Logo" />
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Sonne.html">Sonne</a></li>
+                <li><a href="merkur.html">Merkur</a></li>
+                <li><a href="venus.html">Venus</a></li>
+                <li><a href="erde.html">Erde</a></li>
+                <li><a href="mars.html">Mars</a></li>
+                <li><a href="jupiter.html">Jupiter</a></li>
+                <li><a href="saturn.html">Saturn</a></li>
+                <li><a href="uranus.html">Uranus</a></li>
+                <li><a href="neptun.html">Neptun</a></li>
+                <li><a href="KleinPlaneten.html">Kleinplaneten</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+  <main>
+        <section class="content">
+            <h1>Der Jupiter</h1>
+
+            <article style="margin-bottom: 2rem;">
+                <h2>Ein Überblick</h2>
+                <p>Jupiter ist der größte Planet unseres Sonnensystems – ein Gigant aus Gas. Mit seiner mächtigen Gravitation beeinflusst er viele Objekte in seiner Nähe, darunter auch Asteroidenbahnen. Seine Atmosphäre ist bekannt für den riesigen <strong>Großen Roten Fleck</strong> – ein gewaltiger Sturm, der seit Jahrhunderten tobt.</p>
+            </article>
+
+            <img src="https://pngimg.com/d/jupiter_PNG14.png" alt="Der Jupiter" />
+
+            <article>
+                <h2>Grundlegende Fakten</h2>
+                <ul>
+                    <li><strong>Durchmesser:</strong> ca. 139.820 km</li>
+                    <li><strong>Masse:</strong> 1,9 × 10²⁷ kg (ca. 318 Erdmassen)</li>
+                    <li><strong>Oberflächentemperatur:</strong> ca. -145 °C</li>
+                    <li><strong>Umlaufzeit um die Sonne:</strong> ca. 11,9 Erdjahre</li>
+                    <li><strong>Rotationsdauer:</strong> ca. 9,9 Stunden</li>
+                    <li><strong>Entfernung zur Sonne:</strong> ca. 778 Mio. km (5,2 AE)</li>
+                    <li><strong>Gravitation:</strong> ca. 24,79 m/s²</li>
+                    <li><strong>Atmosphäre:</strong> Wasserstoff, Helium, Methan, Ammoniak</li>
+                    <li><strong>Magnetfeld:</strong> sehr stark – das stärkste aller Planeten</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Aufbau und Besonderheiten</h2>
+                <p>Jupiter besitzt keinen festen Kern wie die Erde, sondern besteht hauptsächlich aus Gasen – mit einem wahrscheinlichen festen Kern tief im Inneren. Seine dichte Atmosphäre zeigt Streifen aus rotierenden Wolkenbändern und Wirbelstürmen. Der berühmteste ist der <strong>Große Rote Fleck</strong>, größer als die Erde selbst.</p>
+            </article>
+
+            <article>
+                <h2>Jupiters Monde</h2>
+                <img src="https://media3.giphy.com/media/dox6SHZcqHgOs/giphy.gif?cid=6c09b952j7ipavnil25imakdov5z8a67vr3r45236bcntjw5&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Jupiter Fun Fact" />
+                <p>Jupiter wird von mehr als 90 bekannten Monden umkreist – darunter die vier großen <strong>Galileischen Monde</strong>: Io, Europa, Ganymed und Kallisto. Jeder von ihnen ist eine Welt für sich, mit eigenen geologischen Geheimnissen, darunter Eisvulkane und unterirdische Ozeane.</p>
+            </article>
+
+            <article>
+                <h2>Bedeutung für das Sonnensystem</h2>
+                <p>Ohne Jupiter sähe unser Sonnensystem vielleicht ganz anders aus. Seine gewaltige Masse wirkt wie ein kosmischer Schutzschild und fängt Kometen und Asteroiden ab, die sonst mit inneren Planeten kollidieren könnten. Gleichzeitig ist er ein Fenster in die Entstehung großer Gasplaneten auch außerhalb unseres Systems.</p>
+            </article>
+
+            <article>
+                <h2>Fun Fact</h2>
+                
+                <p>Ein Tag auf Jupiter dauert nur rund 10 Stunden – das ist der schnellste Rotationswert aller Planeten! Diese rasante Drehung sorgt auch für seine abgeflachte Form: Er ist an den Polen sichtbar gestaucht.</p>
+                <p>Und obwohl Jupiter riesig ist, ist er dennoch zu leicht, um ein Stern zu sein. Dafür müsste er etwa 80 Mal so viel Masse besitzen – doch ein kleiner "gescheiterter Stern" bleibt er allemal.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>©Created by Philipp</p>
+        <div class="nav-list">
+            <a href="Impressum.html" class="footer-link">Impressum</a>
+            <a href="Datenschutz.html" class="footer-link">Datenschutz</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript für Jupiters Rotation beim Scrollen -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('scroll', function () {
+                const scrollPosition = window.scrollY;
+                const rotationDegree = scrollPosition / 3;
+                document.querySelector('.rotating-jupiter-background').style.transform = `rotate(${rotationDegree}deg)`;
+            });
+        });
+    </script>
+</body>
+</html>
