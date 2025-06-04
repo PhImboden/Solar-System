@@ -603,3 +603,92 @@ a:hover {
 }
 
 
+
+/* Saturn */
+body.saturn {
+    background: linear-gradient(to bottom, #1e1e2f, #3a3a5c, #282840);
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Saturn-Bild rotiert im Hintergrund */
+.rotating-saturn-background {
+    position: fixed;
+    top: -5%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 65vw;
+    height: 65vw;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/Saturnx.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.65;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+}
+
+/* Hauptinhalt */
+.content {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(30, 30, 60, 0.75);
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(200, 200, 255, 0.2);
+}
+
+/* Bilder */
+body.saturn .content img {
+    float: right;
+    margin: 0 90px 30px 0;
+    max-width: 340px;
+    height: auto;
+}
+
+/* Überschriften */
+h1, h2 {
+    color: #c0aaff;
+    text-shadow: 0 0 10px rgba(192, 170, 255, 0.4);
+}
+
+/* Listen-Layout */
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+/* Links */
+a {
+    color: #c0aaff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #aaa;
+    background-color: #1e1e2f;
+    border-top: 1px solid #333;
+}
+
+.nav-list a.footer-link {
+    margin: 0 1rem;
+    color: #c0aaff;
+    text-decoration: none;
+}
+
+.nav-list a.footer-link:hover {
+    text-decoration: underline;
+}

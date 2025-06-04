@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <script src="script.js"></script>
+</head>
+
+<body class="saturn">
+    <!-- Hier das neue Element für die sich drehende Saturn -->
+    <div class="rotating-saturn-background"></div>
+
+    <header>
+        <nav class="main-nav">
+            <div id="logo">
+                <img src="logo.png" alt="Solar System Logo" />
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Sonne.html">Sonne</a></li>
+                <li><a href="merkur.html">Merkur</a></li>
+                <li><a href="venus.html">Venus</a></li>
+                <li><a href="erde.html">Erde</a></li>
+                <li><a href="mars.html">Mars</a></li>
+                <li><a href="jupiter.html">Jupiter</a></li>
+                <li><a href="saturn.html">Saturn</a></li>
+                <li><a href="uranus.html">Uranus</a></li>
+                <li><a href="neptun.html">Neptun</a></li>
+                <li><a href="KleinPlaneten.html">Kleinplaneten</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+   <main>
+        <section class="content">
+            <h1>Der Saturn</h1>
+            <article style="margin-bottom: 2rem;">
+                <h2>Ein Überblick</h2>
+                <p>Saturn ist der zweitgrößte Planet in unserem Sonnensystem und besonders bekannt für seine imposanten Ringe. Er besteht hauptsächlich aus Wasserstoff und Helium, ähnlich wie Jupiter, besitzt jedoch ein noch ausgeprägteres Ringsystem, das ihn zum Kronjuwel der Planeten macht.</p>
+            </article>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Saturnx.png" alt="Saturn mit Ringen" />
+
+            <article>
+                <h2>Grundlegende Fakten</h2>
+                <ul>
+                    <li><strong>Durchmesser:</strong> ca. 120.500 km</li>
+                    <li><strong>Masse:</strong> 5,68 × 10²⁶ kg</li>
+                    <li><strong>Oberflächentemperatur:</strong> ca. -140 °C</li>
+                    <li><strong>Umlaufzeit um die Sonne:</strong> ca. 29,5 Erdenjahre</li>
+                    <li><strong>Rotationsdauer:</strong> ca. 10,7 Stunden</li>
+                    <li><strong>Entfernung zur Sonne:</strong> ca. 1,43 Mrd. km (9,5 AE)</li>
+                    <li><strong>Gravitation:</strong> ca. 10,4 m/s²</li>
+                    <li><strong>Atmosphäre:</strong> Wasserstoff, Helium, Methan, Ammoniak</li>
+                    <li><strong>Ringsystem:</strong> Tausende feine Ringe aus Eis und Gestein</li>
+                    <li><strong>Monde:</strong> Über 140 bekannte Monde, darunter Titan</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Besondere Merkmale</h2>
+                <p>Saturns Ringe sind einzigartig im Sonnensystem – hell, ausgedehnt und deutlich sichtbar. Sie bestehen aus Milliarden Partikeln aus Eis, Staub und Gestein, die sich in verschiedenen Bahnen um den Planeten drehen.</p>
+                <p>Der größte Saturnmond, <strong>Titan</strong>, ist selbst größer als der Merkur und besitzt eine dichte Atmosphäre – eine absolute Ausnahme unter Monden. Titan ist daher ein wichtiger Forschungsgegenstand für die Suche nach außerirdischem Leben.</p>
+            </article>
+
+            <article>
+                <h2>Erforschung des Saturns</h2>
+                <img src="https://www.fr.de/assets/images/29/861/29861581-der-planet-saturn-hat-ein-eindrucksvolles-ringsystem-die-ringe-koennten-durch-einen-verlorenen-mond-entstanden-sein-vermuten-forschende-archivbild-hea.jpg" alt="Cassini-Huygens Mission" />
+                <p>Die Raumsonde <strong>Voyager 1</strong> und später <strong>Cassini</strong> lieferten spektakuläre Daten und Bilder des Saturns und seiner Monde. Cassini umkreiste Saturn von 2004 bis 2017 und ermöglichte einen tiefen Blick in die Geheimnisse des Gasriesen.</p>
+            </article>
+
+            <article>
+                <h2>Fun Fact</h2>
+                <p>Saturn ist der einzige Planet, der auf Wasser schwimmen würde – seine Dichte ist geringer als die von Wasser. Trotz seiner Größe ist er also „leichter“ als es scheint.</p>
+                <p>Und seine Ringe? Die könnten sich in wenigen Millionen Jahren auflösen oder verschwinden – ein vergängliches Spektakel am Rande des Universums.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>©Created by Philipp</p>
+        <div class="nav-list">
+            <a href="Impressum.html" class="footer-link">Impressum</a>
+            <a href="Datenschutz.html" class="footer-link">Datenschutz</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript für die Saturn-Drehung -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                const rotationDegree = scrollPosition / 3;
+                document.querySelector('.rotating-saturn-background').style.transform = `rotate(${rotationDegree}deg)`;
+            });
+        });
+    </script>
+</body>
+</html>
