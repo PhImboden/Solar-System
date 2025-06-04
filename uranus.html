@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <script src="script.js"></script>
+</head>
+
+<body class="uranus">
+    <!-- Hier das neue Element für die sich drehende Uranus -->
+    <div class="rotating-uranus-background"></div>
+    <header>
+        <nav class="main-nav">
+            <div id="logo">
+                <img src="logo.png" alt="Solar System Logo" />
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Sonne.html">Sonne</a></li>
+                <li><a href="merkur.html">Merkur</a></li>
+                <li><a href="venus.html">Venus</a></li>
+                <li><a href="erde.html">Erde</a></li>
+                <li><a href="mars.html">Mars</a></li>
+                <li><a href="jupiter.html">Jupiter</a></li>
+                <li><a href="saturn.html">Saturn</a></li>
+                <li><a href="uranus.html">Uranus</a></li>
+                <li><a href="neptun.html">Neptun</a></li>
+                <li><a href="KleinPlaneten.html">Kleinplaneten</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+   <main>
+        <section class="content">
+            <h1>Der Uranus</h1>
+
+            <article style="margin-bottom: 2rem;">
+                <h2>Ein Überblick</h2>
+                <p>Uranus ist der siebte Planet unseres Sonnensystems und ein echter Exot. Er ist ein sogenannter <strong>Eisriese</strong>, zusammengesetzt aus Wasser, Ammoniak und Methan – was ihm seine bläulich-grüne Farbe verleiht. Seine ungewöhnlich starke Neigung lässt ihn quasi auf der Seite durchs All rollen.</p>
+            </article>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Der Planet Uranus">
+
+            <article>
+                <h2>Grundlegende Fakten</h2>
+                <ul>
+                    <li><strong>Durchmesser:</strong> ca. 50.724 km</li>
+                    <li><strong>Masse:</strong> 8,68 × 10²⁵ kg (14,5 Erdmassen)</li>
+                    <li><strong>Oberflächentemperatur:</strong> ca. -224 °C</li>
+                    <li><strong>Umlaufzeit um die Sonne:</strong> ca. 84 Erdenjahre</li>
+                    <li><strong>Rotationsdauer:</strong> ca. 17 Stunden</li>
+                    <li><strong>Entfernung zur Sonne:</strong> ca. 2,87 Mrd. km (19,2 AE)</li>
+                    <li><strong>Dichte:</strong> 1,27 g/cm³</li>
+                    <li><strong>Gravitation:</strong> ca. 8,7 m/s²</li>
+                    <li><strong>Atmosphäre:</strong> Wasserstoff, Helium, Methan</li>
+                    <li><strong>Magnetfeld:</strong> Stark, aber seltsam geneigt</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Besonderheiten des Uranus</h2>
+                <p>Uranus’ <strong>Achsneigung beträgt fast 98°</strong> – er liegt praktisch auf der Seite. Dies sorgt für extreme Jahreszeiten: Eine Polregion ist für über 40 Jahre in Dauerlicht, die andere in Dunkelheit getaucht. Seine Atmosphäre ist die kälteste aller Planeten.</p>
+
+                <h2>Ringe und Monde</h2>
+                <img src="https://www.popsci.com/wp-content/uploads/2019/03/18/2HP2VO3H3GGD2ENK5CXWMLJGPE-e1654195425838.jpg?strip=all&quality=85" alt="Voyager 2 am Uranus" style="width: 32%; max-width: 600px;">
+                <p>Obwohl weniger bekannt, besitzt Uranus ein <strong>komplexes Ringsystem</strong> und über 27 bekannte Monde, benannt nach Figuren aus Werken Shakespeares und Alexander Popes – darunter <em>Titania</em>, <em>Oberon</em> und <em>Miranda</em>.</p>
+            </article>
+
+            <article>
+                <h2>Erforschung</h2>
+                <p>Bisher wurde Uranus nur einmal direkt besucht – von der Raumsonde <strong>Voyager 2</strong> im Jahr 1986. Seitdem stammen alle Daten von Teleskopen. Die Erforschung steht noch am Anfang, aber die NASA plant zukünftige Missionen, um Uranus’ Geheimnisse zu lüften.</p>
+            </article>
+
+            <article>
+                <h2>Fun Fact</h2>
+                <p>Uranus rotiert <strong>retrograd</strong> – also in entgegengesetzter Richtung zu den meisten anderen Planeten. Außerdem ist er der <strong>erste Planet, der mit einem Teleskop entdeckt wurde</strong> (1781 von William Herschel).</p>
+                <p>Seine geheimnisvolle Ausrichtung und eisige Ruhe machen ihn zu einem der ungewöhnlichsten Körper im Sonnensystem – fast wie ein schlafender Riese am Rande der Sonne.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>©Created by Philipp</p>
+        <div class="nav-list">
+            <a href="Impressum.html" class="footer-link">Impressum</a>
+            <a href="Datenschutz.html" class="footer-link">Datenschutz</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript für die Uranus-Drehung beim Scrollen -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('scroll', function () {
+                const scrollPosition = window.scrollY;
+                const rotationDegree = scrollPosition / 3;
+                document.querySelector('.rotating-uranus-background').style.transform = `rotate(${rotationDegree}deg)`;
+            });
+        });
+    </script>
+</body>
+</html>
