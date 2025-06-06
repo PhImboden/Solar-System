@@ -843,3 +843,68 @@ a:hover {
     color: #66ffff;
     text-shadow: 0 0 5px rgba(102, 255, 255, 0.7);
 }
+
+
+/* Kleinplaneten */
+body.kleinplaneten {
+    background: linear-gradient(to bottom, #0c0c0c, #1a1a1a, #2e2e2e);
+    color: #eeeeee;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Rotierender Kleinplanet-Hintergrund */
+.rotating-asteroid-background {
+    position: fixed;
+    top: -5%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vw;
+    background-image: url('https://pngimg.com/d/asteroid_PNG14.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    transition: transform 0.1s ease;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* Bildstil */
+body.kleinplaneten .content img {
+    float: right;
+    margin: 0 90px 20px 0;
+    max-width: 340px;
+    height: auto;
+}
+
+/* Inhaltsbox */
+.content {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(20, 20, 20, 0.75);
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.4);
+}
+
+/* Überschriften */
+h1, h2 {
+    color: #b0e0e6; /* hellblau-grau, passend zur Thematik */
+    text-shadow: 0 0 10px rgba(176, 224, 230, 0.5);
+}
+
+/* Links */
+a {
+    color: #b0e0e6;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
