@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldung - Solar System</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="stylesheet" href="stylesheets/anmeldung.css" />
+</head>
+
+<body class="anmeldung">
+    <!-- Rotierender Hintergrund -->
+    <div class="rotating-registration-background"></div>
+    
+    <header>
+        <nav class="main-nav">
+            <div id="logo">
+                <img src="logo.png" alt="Solar System Logo" />
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Quiz.html">Zurück zum Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="registration-container">
+                <h1>🌟 Anmeldung für das Planeten Quiz 🌟</h1>
+                
+                <div class="registration-intro">
+                    <p>Um am Quiz teilnehmen zu können, melde dich bitte mit deinen Daten an. Wir benötigen nur ein paar grundlegende Informationen von dir.</p>
+                </div>
+
+                <form id="registration-form">
+                    <div class="form-section">
+                        <h2>Pflichtangaben</h2>
+                        
+                        <div class="form-group">
+                            <label for="nachname">Nachname *</label>
+                            <input type="text" id="nachname" name="nachname" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-Mail-Adresse *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Optionale Angaben</h2>
+                        
+                        <div class="form-group">
+                            <label for="vorname">Vorname</label>
+                            <input type="text" id="vorname" name="vorname">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefon">Telefonnummer</label>
+                            <input type="tel" id="telefon" name="telefon">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alter">Alter</label>
+                            <input type="number" id="alter" name="alter" min="1" max="120">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="register-btn">Anmelden und Quiz starten</button>
+                        <button type="button" class="cancel-btn" onclick="window.close()">Abbrechen</button>
+                    </div>
+                </form>
+
+                <div id="registration-success" style="display: none;">
+                    <h2>🎉 Anmeldung erfolgreich!</h2>
+                    <p>Willkommen <span id="welcome-name"></span>! Du kannst jetzt am Quiz teilnehmen.</p>
+                    <button onclick="goToQuiz()" class="quiz-btn">Zum Quiz</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©Created by Philipp</p>
+        <div class="nav-list">
+            <a href="Impressum.html" class="footer-link">Impressum</a>
+            <a href="Datenschutz.html" class="footer-link">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Formulardaten sammeln
+            const formData = {
+                nachname: document.getElementById('nachname').value,
+                email: document.getElementById('email').value,
+                vorname: document.getElementById('vorname').value || '',
+                telefon: document.getElementById('telefon').value || '',
+                alter: document.getElementById('alter').value || ''
+            };
+            
+            // Validierung
+            if (!formData.nachname.trim() || !formData.email.trim()) {
+                alert('Bitte fülle alle Pflichtfelder aus!');
+                return;
+            }
+            
+            // E-Mail-Format prüfen
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                alert('Bitte gib eine gültige E-Mail-Adresse ein!');
+                return;
+            }
+            
+            // Benutzerdaten speichern
+            const userData = {
+                name: formData.nachname,
+                vorname: formData.vorname,
+                email: formData.email,
+                telefon: formData.telefon,
+                alter: formData.alter,
+                registrationDate: new Date().toISOString()
+            };
+            
+            // In localStorage speichern (in echter Anwendung würde man diese Daten an einen Server senden)
+            localStorage.setItem('solarSystemUser', JSON.stringify(userData));
+            
+            // Erfolgreiche Anmeldung anzeigen
+            showRegistrationSuccess(userData);
+        });
+
+        function showRegistrationSuccess(userData) {
+            const displayName = userData.vorname ? `${userData.vorname} ${userData.name}` : userData.name;
+            
+            document.getElementById('welcome-name').textContent = displayName;
+            document.getElementById('registration-form').style.display = 'none';
+            document.getElementById('registration-success').style.display = 'block';
+        }
+
+        function goToQuiz() {
+            // Fenster schließen und Parent-Fenster aktualisieren
+            window.opener.location.reload();
+            window.close();
+        }
+
+        // Beim Laden prüfen ob bereits angemeldet
+        document.addEventListener('DOMContentLoaded', function() {
+            const userData = JSON.parse(localStorage.getItem('solarSystemUser') || 'null');
+            if (userData) {
+                showRegistrationSuccess(userData);
+            }
+        });
+    </script>
+</body>
+
+</html>

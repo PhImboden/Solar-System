@@ -367,12 +367,7 @@ body.venus .content img {
     box-shadow: 0 0 12px rgba(255, 190, 138, 0.3);
 }
 
-/* Überschriften */
-body.venus h1, 
-body.venus h2 {
-    color: #ffb347; /* warmer Orange-Gold-Ton */
-    text-shadow: 0 0 10px rgba(255, 136, 77, 0.6);
-}
+
 
 /* Links */
 body.venus a {
@@ -501,11 +496,6 @@ body.mars .content img {
     height: auto;
 }
 
-/* Überschriften */
-body.mars h1, body.mars h2 {
-    color: #ff7043;
-    text-shadow: 0 0 10px rgba(255, 112, 67, 0.5);
-}
 
 /* Links */
 body.mars a {
@@ -697,7 +687,7 @@ footer {
 /* Uranus */
 body.uranus {
     background: linear-gradient(to bottom, #a1c4fd, #c2e9fb, #8ec5fc);
-    color: #000;
+    color: #ffffff;
     font-family: Arial, sans-serif;
     position: relative;
     min-height: 100vh;
@@ -1156,4 +1146,112 @@ h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-shadow: 0 0 20px rgba(100, 223, 223, 0.6);
+}
+
+/* Anmeldungen */
+/* Anmeldung-Seite Styling */
+body.anmeldung {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Rotierender Anmeldungs-Hintergrund */
+.rotating-registration-background {
+    position: fixed;
+    top: -5%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 55vw;
+    height: 55vw;
+    background-image: url('https://pngimg.com/uploads/astronaut/astronaut_PNG26.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    transition: transform 0.1s ease;
+    opacity: 0.1;
+    pointer-events: none;
+    animation: floatAnimation 6s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0px) rotate(0deg); }
+    25% { transform: translate(-50%, -50%) translateY(-20px) rotate(2deg); }
+    75% { transform: translate(-50%, -50%) translateY(20px) rotate(-2deg); }
+}
+
+/* Registration Container */
+.registration-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.registration-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.registration-intro p {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Form Sections */
+.form-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-section h2 {
+    color: #ffd700;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #FFEB3B;
 }
