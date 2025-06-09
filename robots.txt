@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Disallow: /login.html
+Disallow: /register.html
+
+Sitemap: https://deine-domain.de/sitemap.xml
