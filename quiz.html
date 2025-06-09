@@ -1,1 +1,286 @@
-*Man muss sich vor dem Quiz anmelden, um teilnehmen zu können. Das Quiz ist nur für angemeldete Benutzer sichtbar. Wenn Sie noch kein Konto haben, können Sie sich [hier](register.html) registrieren.*
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeten Quiz - Solar System</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="stylesheet" href="stylesheets/quiz.css" />
+</head>
+
+<body class="quiz">
+    <!-- Rotierender Hintergrund für Quiz -->
+    <div class="rotating-quiz-background"></div>
+    
+    <header>
+        <nav class="main-nav">
+            <div id="logo">
+                <img src="logo.png" alt="Solar System Logo" />
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Sonne.html">Sonne</a></li>
+                <li><a href="merkur.html">Merkur</a></li>
+                <li><a href="venus.html">Venus</a></li>
+                <li><a href="erde.html">Erde</a></li>
+                <li><a href="mars.html">Mars</a></li>
+                <li><a href="jupiter.html">Jupiter</a></li>
+                <li><a href="saturn.html">Saturn</a></li>
+                <li><a href="uranus.html">Uranus</a></li>
+                <li><a href="neptun.html">Neptun</a></li>
+                <li><a href="KleinPlaneten.html">Kleinplaneten</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <h1>🌌 Planeten Quiz 🌌</h1>
+            
+            <!-- Quiz Container -->
+            <div id="quiz-container">
+                <div class="quiz-intro">
+                    <h2>Teste dein Wissen über unser Sonnensystem!</h2>
+                    <p>Beantworte 5 einfache Fragen über die Planeten und finde heraus, wie gut du dich auskennst.</p>
+                </div>
+
+                <form id="quiz-form">
+                    <!-- Frage 1 -->
+                    <div class="question-container">
+                        <h3>1. Welcher Planet ist der Sonne am nächsten?</h3>
+                        <div class="answer-options">
+                            <label>
+                                <input type="radio" name="q1" value="venus">
+                                Venus
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="merkur">
+                                Merkur
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="erde">
+                                Erde
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Frage 2 -->
+                    <div class="question-container">
+                        <h3>2. Welcher Planet ist als "Roter Planet" bekannt?</h3>
+                        <div class="answer-options">
+                            <label>
+                                <input type="radio" name="q2" value="venus">
+                                Venus
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="mars">
+                                Mars
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="jupiter">
+                                Jupiter
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Frage 3 -->
+                    <div class="question-container">
+                        <h3>3. Welcher ist der größte Planet in unserem Sonnensystem?</h3>
+                        <div class="answer-options">
+                            <label>
+                                <input type="radio" name="q3" value="saturn">
+                                Saturn
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="jupiter">
+                                Jupiter
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="neptun">
+                                Neptun
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Frage 4 -->
+                    <div class="question-container">
+                        <h3>4. Welcher Planet hat die markanten Ringe?</h3>
+                        <div class="answer-options">
+                            <label>
+                                <input type="radio" name="q4" value="uranus">
+                                Uranus
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="saturn">
+                                Saturn
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="jupiter">
+                                Jupiter
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Frage 5 -->
+                    <div class="question-container">
+                        <h3>5. Wie viele Planeten gibt es in unserem Sonnensystem?</h3>
+                        <div class="answer-options">
+                            <label>
+                                <input type="radio" name="q5" value="7">
+                                7
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="8">
+                                8
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="9">
+                                9
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Quiz abschicken</button>
+                </form>
+
+                <!-- Ergebnis wird hier angezeigt -->
+                <div id="quiz-result" style="display: none;">
+                    <h2>Dein Ergebnis:</h2>
+                    <p id="result-text"></p>
+                    <button onclick="restartQuiz()" class="restart-btn">Nochmal versuchen</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©Created by Philipp</p>
+        <div class="nav-list">
+            <a href="Impressum.html" class="footer-link">Impressum</a>
+            <a href="Datenschutz.html" class="footer-link">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script>
+        let isLoggedIn = false;
+        let currentUser = null;
+
+        // Anmeldestatus prüfen
+        function checkLoginStatus() {
+            const userData = JSON.parse(localStorage.getItem('solarSystemUser') || 'null');
+            if (userData) {
+                isLoggedIn = true;
+                currentUser = userData;
+                return true;
+            }
+            return false;
+        }
+
+        // Quiz-Formular Event Listener
+        document.getElementById('quiz-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Prüfen ob angemeldet
+            if (!checkLoginStatus()) {
+                // Zur Anmeldeseite weiterleiten
+                window.open('anmeldung.html', '_blank');
+                return;
+            }
+            
+            // Quiz auswerten
+            evaluateQuiz();
+        });
+
+        function evaluateQuiz() {
+            const answers = {
+                q1: 'merkur',
+                q2: 'mars', 
+                q3: 'jupiter',
+                q4: 'saturn',
+                q5: '8'
+            };
+            
+            let score = 0;
+            let totalQuestions = 5;
+            
+            // Antworten überprüfen
+            for (let question in answers) {
+                const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedAnswer && selectedAnswer.value === answers[question]) {
+                    score++;
+                }
+            }
+            
+            // Ergebnis anzeigen
+            showResult(score, totalQuestions);
+        }
+
+        function showResult(score, total) {
+            const percentage = (score / total) * 100;
+            let message = '';
+            
+            if (percentage === 100) {
+                message = `🌟 Perfekt! Du hast alle ${score} von ${total} Fragen richtig beantwortet! Du bist ein wahrer Weltraum-Experte! 🚀`;
+            } else if (percentage >= 80) {
+                message = `🎉 Sehr gut! Du hast ${score} von ${total} Fragen richtig beantwortet! Du kennst dich super mit den Planeten aus! 🌍`;
+            } else if (percentage >= 60) {
+                message = `👍 Gut gemacht! Du hast ${score} von ${total} Fragen richtig beantwortet! Mit etwas mehr Übung wirst du zum Planeten-Profi! 🌙`;
+            } else {
+                message = `💫 Du hast ${score} von ${total} Fragen richtig beantwortet. Keine Sorge - erkunde unsere Planetenseiten und versuche es nochmal! 🌌`;
+            }
+            
+            document.getElementById('result-text').innerHTML = message;
+            document.getElementById('quiz-container').style.display = 'none';
+            document.getElementById('quiz-result').style.display = 'block';
+        }
+
+        function restartQuiz() {
+            // Formular zurücksetzen
+            document.getElementById('quiz-form').reset();
+            document.getElementById('quiz-container').style.display = 'block';
+            document.getElementById('quiz-result').style.display = 'none';
+        }
+
+        // Beim Laden der Seite prüfen ob angemeldet
+        document.addEventListener('DOMContentLoaded', function() {
+            if (checkLoginStatus()) {
+                console.log('Benutzer angemeldet:', currentUser.name);
+            }
+        });
+    </script>
+</body>
+        </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>©Created by Philipp</p>
+        <div class="nav-list">
+            <a href="Impressum.html" class="footer-link">Impressum</a>
+            <a href="Datenschutz.html" class="footer-link">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>©Created by Philipp</p>
+        <div class="nav-list">
+            <a href="Impressum.html" class="footer-link">Impressum</a>
+            <a href="Datenschutz.html" class="footer-link">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</html>
