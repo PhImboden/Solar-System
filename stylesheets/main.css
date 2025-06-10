@@ -11,6 +11,15 @@ body {
     color: #ffffff;
     background-color: #f4f4f8;
 }
+.content img {
+    float: right;
+    /* Bild rechts ausrichten */
+    margin: 0 90px 0px 0;
+    /* Abstand rechts und unten */
+    max-width: 340px;
+    /* Kleiner als im Original für besseren Textfluss */
+    height: auto;
+}
 
 /* Navigation Styles */
 .main-nav {
