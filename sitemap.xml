@@ -1,26 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://deine-domain.de/index.html</loc>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Planeten-Seiten -->
-  <url><loc>https://deine-domain.de/sonne.html</loc></url>
-  <url><loc>https://deine-domain.de/merkur.html</loc></url>
-  <url><loc>https://deine-domain.de/venus.html</loc></url>
-  <url><loc>https://deine-domain.de/erde.html</loc></url>
-  <url><loc>https://deine-domain.de/mars.html</loc></url>
-  <url><loc>https://deine-domain.de/jupiter.html</loc></url>
-  <url><loc>https://deine-domain.de/saturn.html</loc></url>
-  <url><loc>https://deine-domain.de/uranus.html</loc></url>
-  <url><loc>https://deine-domain.de/neptun.html</loc></url>
-  <url><loc>https://deine-domain.de/kleinplaneten.html</loc></url>
-
-  <!-- Quiz und statische Seiten -->
-  <url><loc>https://deine-domain.de/quiz.html</loc></url>
-  <url><loc>https://deine-domain.de/impressum.html</loc></url>
-  <url><loc>https://deine-domain.de/datenschutz.html</loc></url>
-
+    <url>
+        <loc>https://deine-domain.de/index.html</loc>
+        <priority>1.0</priority>
+    </url>
+    <!-- Planeten-Seiten -->
+    <url>
+        <loc>https://deine-domain.de/sonne.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/merkur.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/venus.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/erde.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/mars.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/jupiter.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/saturn.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/uranus.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/neptun.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/kleinplaneten.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <!-- Quiz und statische Seiten -->
+    <url>
+        <loc>https://deine-domain.de/quiz.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/impressum.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://deine-domain.de/datenschutz.html</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
 </urlset>
