@@ -931,12 +931,12 @@ body.quiz {
 /* Rotierender Quiz-Hintergrund */
 .rotating-quiz-background {
     position: fixed;
-    top: -10%;
-    left: 10%;
+    top: 55%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 70vw;
-    height: 70vw;
-    background-image: url('https://pngimg.com/uploads/solar_system/solar_system_PNG38.png');
+    width: 85vw;
+    height: 85vw;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Observable_universe_logarithmic_illustration.png/1200px-Observable_universe_logarithmic_illustration.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
